@@ -1,4 +1,4 @@
-import simpleaudio as sa                                                                    #Importeer time en simpleaudio module
+import simpleaudio as sa
 import time
 import random
 BPMSet = True
