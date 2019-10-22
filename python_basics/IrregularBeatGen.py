@@ -17,8 +17,8 @@ samples = [sa.WaveObject.from_wave_file("BeatGen/Hat1.wav"),
                     sa.WaveObject.from_wave_file("BeatGen/Snare2.wav"),
                         sa.WaveObject.from_wave_file("BeatGen/Kick1.wav"),
                             sa.WaveObject.from_wave_file("BeatGen/Kick2.wav"),]
-
-print("Irregular Beat Generator V1")
+print("")
+print("Irregular Beat Generator V1 \n")
 print("Set a time signature like this: 'Integer/Integer'")
 print("The second integer has to be a 4 or an 8")
 
@@ -30,35 +30,44 @@ while setup == 0:
     try:
         timeSig = timeSig.split("/")
     except:
-        print("Invalid Input")
+        print("\nInvalid Input \n")
         continue
     try:
         for i in range(0, len(timeSig)):
             timeSig[i] = int(timeSig[i])
-            setup = 1
+            if timeSig[0] > 0:
+                setup = 1
+            else:
+                setup = 0
     except:
-        print("Invalid Input")
+        print("\nInvalid Input \n")
         setup = 0
         continue
     if len(timeSig) == 2:
         if timeSig[1] == 4 or timeSig[1] == 8:
             pass
         else:
-            print("Invalid Input")
+            print("\nInvalid Input \n")
             setup = 0
     else:
-        print("Invalid Input")
+        print("\nInvalid Input \n")
         setup = 0
 
 #Asks for tempo
 while BPMSet == True:
+    print("")
     print("Current BPM:", BPM)
-    print("Change it to whatever number you want or enter 120 to keep it:")
+    print("Change it to whatever number you want:")
     try:
         BPM = int(input())
-        BPMSet = False
+        if BPM > 0:
+            BPMSet = False
+        else:
+            print("")
+            print("Please Enter a valid number!")
     except:
-        print("Please Enter a Number!")
+        print("")
+        print("Please Enter a valid number!")
 
 #Calculations on the time signature and adds necessary numbers
 if timeSig[1] == 4:
@@ -98,7 +107,7 @@ for i in range(timeSig[2]):
 degrees  = kick # MIDI note number
 track    = 0
 channel  = 9
-timer     = 0   # In beats
+timer    = 0   # In beats
 tempo    = BPM  # In BPM
 volume   = 100 # 0-127, as per the MIDI standard
 # Adds 1 miditrack
@@ -126,13 +135,17 @@ with open("Generated-Beat.mid", "wb") as output_file:
 
 #Changes BPM to 16th note milliseconds
 BPM = ((60000/BPM)/1000)/4
-print(kick)
-print(snare)
-print(hat)
+print("")
+print("2 = Loud sample, 1 = Soft Sample, 0 = Silence \n")
+print("Grid:\n")
+print("Kick: ", kick)
+print("Snare:", snare)
+print("HiHat:", hat)
+print("\nThe loop will play 4 times")
 
 #Checks every 16th note what needs to be played and loops when done
 i = 0
-while loop == True:
+while loop < 5:
     if i == len(kick):
         exit()
     else:
@@ -189,3 +202,8 @@ while loop == True:
                 pass
     i += 1
     i = i % len(kick)
+    if i == 0:
+        loop = loop +1
+
+print("\nMIDI File Saved!")
+print("")
