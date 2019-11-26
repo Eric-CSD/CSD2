@@ -7,6 +7,5 @@ public:
   ~Instrument();
   int play();
 private:
-  int x;
   string sound;
 };

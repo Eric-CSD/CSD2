@@ -1,6 +1,6 @@
 all: instrument_class
 
-instrument_class : instrument_class.cpp	instrument_class.h
+instrument_class.o : instrument_class.cpp	instrument_class.h
 	g++ -c instrument_class.cpp
 
 instrument.o	:	instrument.cpp	instrument_class.h
