@@ -19,7 +19,7 @@ void Instrument::play()
   cout << sound << endl;
 
 }
-
+//Gives instrument a pitch range (0,1,2 input)
 void Instrument::pitch(int pitch)
 {
   if (pitch == 0)

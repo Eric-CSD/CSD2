@@ -15,7 +15,6 @@ protected:
   string sound;
   string name;
   string type;
-  string preset;
 };
 
 #endif

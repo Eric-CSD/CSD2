@@ -13,6 +13,5 @@ Keys::~Keys()
 // methods
 void Keys  ::selectPreset(string preset)
 {
-  this->preset = preset;
   cout << "Selecting keys preset:" << preset << endl;
 }

@@ -10,4 +10,6 @@ public:
 
   // methods
   void selectPreset(string);
+private:
+    string preset;
 };
