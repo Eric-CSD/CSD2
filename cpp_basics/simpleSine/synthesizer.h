@@ -11,7 +11,7 @@ public:
   ~Synthesizer();
 
 int addSynth(float osc1, float freq1, float osc2, float freq2);
-int AMSynth(float freq1, float freq2);
+int AMSynth(float osc1, float freq1, float osc2, float freq2);
 private:
 };
 
