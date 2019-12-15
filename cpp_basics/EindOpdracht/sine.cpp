@@ -2,11 +2,9 @@
 #include "math.h"
 
 Sine::Sine() : Oscillator() {
-  cout << "Sine constructor" << endl;
 }
 
 Sine::~Sine() {
-  cout << "Sine destructor" << endl;
 }
 
 // sine wave formula

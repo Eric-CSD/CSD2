@@ -2,11 +2,9 @@
 #include "math.h"
 
 Saw::Saw() : Oscillator() {
-  cout << "Saw constructor" << endl;
 }
 
 Saw::~Saw() {
-  cout << "Saw destructor" << endl;
 }
 
 // saw wave formula
