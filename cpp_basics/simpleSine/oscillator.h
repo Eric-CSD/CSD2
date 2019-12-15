@@ -16,9 +16,8 @@ public:
 
   //return the current sample
   float getSample();
-
 protected:
-  float amplitude = 0.1;
+  float amplitude = 1;
   float frequency;
   float phase;
   // contains the current sample

@@ -10,8 +10,8 @@
  */
 int main(int argc,char **argv){
   Synthesizer addSynth;
-  addSynth.AMSynth(50, 880);
+  addSynth.AMSynth(200, 440);
   Synthesizer addSynth2;
-  addSynth2.additiveSynthesis(1, 400, 2, 500);
+  addSynth2.addSynth(1, 400, 2, 500);
   return 0;
 } // main()
