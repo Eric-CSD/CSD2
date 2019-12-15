@@ -31,6 +31,7 @@ int Synthesizer::addSynth(float osc1, float freq1, float osc2, float freq2)
         oscillator2.tick(samplerate);
         outBuf[i] = ampOsc1*(oscillator1.getSample());
         outBuf[i] += ampOsc2*oscillator2.getSample();
+        outBuf[i] *= 0.1;
 
       }
       return 0;
@@ -64,9 +65,11 @@ int Synthesizer::AMSynth(float osc1, float freq1, float osc2, float freq2)
        jack_default_audio_sample_t *outBuf, jack_nframes_t nframes) {
 
       for(unsigned int i = 0; i < nframes; i++) {
-        outBuf[i] = ((oscillator1.getSample() * ((oscillator2.getSample())+oscillator2.getAmplitude())/2)*amplitude)*30;
         oscillator1.tick(samplerate);
         oscillator2.tick(samplerate);
+        outBuf[i] = amplitude*(oscillator1.getSample());
+        outBuf[i] *= (oscillator2.getSample()+oscillator2.getAmplitude())/2*amplitude;
+        outBuf[i] *= 5;
       }
       return 0;
     };
