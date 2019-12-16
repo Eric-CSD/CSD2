@@ -32,14 +32,63 @@
  void Melodygenerator::playAdd(int amtOfNotes) {
    std::random_device dev;
        std::mt19937 rng(dev());
-   int nextNote = 0;
+   float nextNote = 0;
+   float nextNote2 =0;
    int note = 0;
    Synthesizer addSynth;
    while (note < amtOfNotes){
-     std::uniform_int_distribution<std::mt19937::result_type> dist100(1,100);
-     nextNote =dist100(rng)+5;
-     std::cout<< "Osc1: " << (nextNote*6) << "   Osc2: " << (nextNote*9) << endl;
-     addSynth.addSynth(1, (nextNote*6),1, (nextNote*9));
+     std::uniform_int_distribution<std::mt19937::result_type> dist7(1,7);
+     switch (dist7(rng)){
+      case 1:
+        nextNote =60;
+        break;
+      case 2:
+        nextNote =62;
+        break;
+      case 3:
+        nextNote =64;
+        break;
+      case 4:
+        nextNote =65;
+        break;
+      case 5:
+        nextNote =67;
+        break;
+      case 6:
+        nextNote =69;
+        break;
+      case 7:
+        nextNote =71;
+        break;
+     }
+     std::uniform_int_distribution<std::mt19937::result_type> dist72(1,7);
+     switch (dist72(rng)){
+      case 1:
+        nextNote2 =72;
+        break;
+      case 2:
+        nextNote2 =74;
+        break;
+      case 3:
+        nextNote2 =76;
+        break;
+      case 4:
+        nextNote2 =77;
+        break;
+      case 5:
+        nextNote2 =79;
+        break;
+      case 6:
+        nextNote2 =81;
+        break;
+      case 7:
+        nextNote2 =83;
+        break;
+     }
+     nextNote =(440. * exp(.057762265 * (nextNote - 69.)));
+     nextNote2 =(440. * exp(.057762265 * (nextNote2 - 69.)));
+     std::cout<< "Osc1: " << nextNote << "   Osc2: " << nextNote2 << endl;
+     addSynth.addSynth(1, nextNote,1, nextNote2);
      note += 1;
    }
  }
