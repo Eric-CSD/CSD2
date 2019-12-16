@@ -53,7 +53,8 @@ int Synthesizer::addSynth(float osc1, float freq1, float osc2, float freq2)
 //AM Synthesizer with 2 sine oscillators
 int Synthesizer::AMSynth(float osc1, float freq1, float osc2, float freq2)
 {
-  double  amplitude = 0;
+  double  ampOsc1 = 0;
+  double  ampOsc2 = 0;
   JackModule jack;
   jack.init();
   double samplerate = jack.getSamplerate();
@@ -67,18 +68,23 @@ int Synthesizer::AMSynth(float osc1, float freq1, float osc2, float freq2)
       for(unsigned int i = 0; i < nframes; i++) {
         oscillator1.tick(samplerate);
         oscillator2.tick(samplerate);
-        outBuf[i] = amplitude*(oscillator1.getSample());
-        outBuf[i] *= (oscillator2.getSample()+oscillator2.getAmplitude())/2*amplitude;
+        outBuf[i] = ampOsc1*(oscillator1.getSample());
+        outBuf[i] *= (oscillator2.getSample()+oscillator2.getAmplitude())/2*ampOsc2;
         outBuf[i] *= 5;
       }
       return 0;
     };
     jack.autoConnect();
-    while (amplitude<1){
-      amplitude += 0.000000001;
+    while (ampOsc1<1){
+      ampOsc1 += 0.000000002
+      ;
     }
-    while (amplitude>0){
-      amplitude -= 0.000000001;
+    while (ampOsc2<1){
+      ampOsc2 += 0.000000002;
+    }
+    while (ampOsc1>0){
+      ampOsc1 -= 0.000000001;
+      ampOsc2 -= 0.000000001;
     }
     jack.end();
   return 0;
