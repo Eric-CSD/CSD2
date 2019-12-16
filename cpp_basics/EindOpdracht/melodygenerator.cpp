@@ -13,10 +13,10 @@
 
  Melodygenerator::~Melodygenerator() {
  }
-
+//Plays note sequence with AM Synthesizer
  void Melodygenerator::playAM(int amtOfNotes) {
    std::random_device dev;
-       std::mt19937 rng(dev());
+   std::mt19937 rng(dev());
    int nextNote = 0;
    int note = 0;
    Synthesizer AMSynth;
@@ -28,10 +28,10 @@
      note += 1;
    }
  }
-
+//Plays note sequence with additive Synthesizer
  void Melodygenerator::playAdd(int amtOfNotes) {
    std::random_device dev;
-       std::mt19937 rng(dev());
+   std::mt19937 rng(dev());
    float nextNote = 0;
    float nextNote2 =0;
    int note = 0;

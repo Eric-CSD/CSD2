@@ -8,6 +8,8 @@
  * on mac, you can start the jack audio server daemon in the terminal:
  * jackd -d coreaudio
  */
+
+ //User interface for SynthSong
 int main(int argc,char **argv){
 bool program = true;
 int noteAmt = 0;
@@ -18,23 +20,23 @@ while (program){
   std::cout << "Enter 2 to play Additive Synth Song\n";
   std::cout << "Press q to exit\n";
   bool running = true;
-    while (running)
+  while (running)
+  {
+    switch (std::cin.get())
     {
-      switch (std::cin.get())
-      {
-        case '1':
-          running = false;
-          std::cout << "\nHow many notes do you want to play?\n";
-          std::cin >> noteAmt;
-          while (!cin.good())
-          {
-            cin.clear();
-            cin.ignore(INT_MAX, '\n');
-            std::cout << "Enter a valid number!\n";
-          }
-          melody.playAM(noteAmt);
-          break;
-        case '2':
+      case '1':
+        running = false;
+        std::cout << "\nHow many notes do you want to play?\n";
+        std::cin >> noteAmt;
+        while (!cin.good())
+        {
+          cin.clear();
+          cin.ignore(INT_MAX, '\n');
+          std::cout << "Enter a valid number!\n";
+        }
+        melody.playAM(noteAmt);
+        break;
+      case '2':
         running = false;
         std::cout << "\nHow many notes do you want to play?\n";
         std::cin >> noteAmt;
@@ -46,11 +48,9 @@ while (program){
         }
         melody.playAdd(noteAmt);
         break;
-        case 'q':
-          program = false;
-          running = false;
-          break;
-        case '3':
+      case 'q':
+        program = false;
+        running = false;
         break;
       }
   }
