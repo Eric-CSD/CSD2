@@ -14,7 +14,7 @@
 
 // 10 seconds if samplerate = 44100
 #define MAX_DELAY_SIZE 441000
-#define DELAY_TIME_SEC 9.0f
+#define DELAY_TIME_SEC 1.0f
 
 #define PI_2 6.28318530717959
 
@@ -47,7 +47,7 @@ int main(int argc,char **argv)
       circBuffer.write(inBuf[i]);
       circBuffer.incrWriteH();
 
-      outBuf[i] = circBuffer.read() * 0.5;
+      outBuf[i] = circBuffer.read() * 0.5+inBuf[i];
       circBuffer.incrReadH();
     }
     return 0;
