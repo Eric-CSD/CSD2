@@ -159,12 +159,11 @@ int main(int argc,char **argv)
   jack.autoConnect();
 
   //keep the program running and listen for user input, q = quit
-  std::cout << "\n\nPress 'q' to quit.\n";
-  std::cout << "Press 's1' to turn on stutter, press 's0' to turn it off.\n";
-  std::cout << "Press 'l' change stutter length.\n";
+  std::cout << "\n\nUse Myo Gestur armband for effects.\n";
   bool running = true;
   while (running)
   {
+    //check if stutter is on
     if (stutterOn == 1){
       stutter = stutterOn;
       stutterEffect.setStutter(stutter);
@@ -175,28 +174,7 @@ int main(int argc,char **argv)
       stutterEffect.setStutter(stutter);
 
     }
-    // switch (std::cin.get())
-    // {
-    //   // user input for quiting and changing settings
-    //   case 'q':
-    //     running = false;
-    //     jack.end();
-    //     break;
-    //   case 's':
-    //     int newStutter;
-    //     std::cin >> newStutter;
-    //     stutter = newStutter;
-    //     stutterEffect.setStutter(stutter);
-    //     break;
-    //   case 'l':
-    //     float newTime;
-    //     std::cin >> newTime;
-    //
-    //     delayTime = newTime;
-    //     stutterEffect.setTime(delayTime);
-    //     stutterEffect.setTime(newTime);
-    //     break;
-    //   }
+
   }
 
   //end the program
