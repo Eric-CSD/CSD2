@@ -159,7 +159,7 @@ int main(int argc,char **argv)
   jack.autoConnect();
 
   //keep the program running and listen for user input, q = quit
-  std::cout << "\n\nUse Myo Gestur armband for effects.\n";
+  std::cout << "\n\nUse Myo Gesture wristband for effects.\n";
   bool running = true;
   while (running)
   {
