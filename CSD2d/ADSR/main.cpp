@@ -25,6 +25,7 @@ int main(int argc,char **argv)
   // create a JackModule instance
   JackModule jack;
   Synthesizer synthesizer;
+  //ADSR initialized values and noteOff message + frequency
   int note = 0;
   float a = 0;
   float d = 0;

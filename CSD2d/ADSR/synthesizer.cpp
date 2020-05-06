@@ -4,6 +4,7 @@
 #include "oscillator.h"
 #include "sine.h"
 #include "envelope.h"
+#include "subject.h"
 
 Synthesizer::Synthesizer() : Generator() {
     sine.setFrequency(440);

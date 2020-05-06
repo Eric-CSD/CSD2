@@ -1,5 +1,6 @@
 #include "generator.h"
 #include "math.h"
+#include "clock.h"
 
 Generator::Generator() {
 }

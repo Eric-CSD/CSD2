@@ -1,6 +1,7 @@
 #ifndef _GENERATOR_H_
 #define _GENERATOR_H_
 #include <iostream>
+#include "clock.h"
 using namespace std;
 
 class Generator{

@@ -5,6 +5,8 @@
 #include "generator.h"
 #include "sine.h"
 #include "envelope.h"
+#include "clock.h"
+#include "subject.h"
 using namespace std;
 
 class Synthesizer : public Generator {
@@ -19,6 +21,11 @@ public:
   void setPitch(float f);
   Sine sine;
   Envelope envelope;
+  Clock clock2();
+  Clock clock1();
+  // subject.Attach(&clock1);
+  // subject.Attach(&clock2);
+
 protected:
   double output;
 };

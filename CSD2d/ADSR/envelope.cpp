@@ -8,7 +8,7 @@ Envelope::Envelope() : Generator() {
 
 Envelope::~Envelope() {
 }
-
+//sets ADSR values
 void Envelope::setADSR(float attack,float decay,float sustain, float release) {
   this->attack = attack;
   this->decay = decay;
@@ -18,6 +18,7 @@ void Envelope::setADSR(float attack,float decay,float sustain, float release) {
   dec=samplerate*(decay/1000);
   rele=samplerate*(release/1000);
 }
+//calculates envelope for attack decay sustain
 float Envelope::ads() {
 
   if(getSample()<=att){
@@ -30,7 +31,7 @@ float Envelope::ads() {
   tick();
 return amp;
 }
-
+//calculates release envelope
 float Envelope::rel() {
   if(amp> 0){
     amp -=1/rele;
