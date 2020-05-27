@@ -33,9 +33,14 @@ sineSlider.setRange (Int Low, Int High);
 
 ### Audio Flow
 
+Sine Wave Oscillator instances are created. Pitched accordingly with spread and
+have their amplitude adjusted with the tremolo.
+
 ![](images/AudioFlow.png)
 
 ### System Diagram
+
+System diagram with functions and inheritance.
 
 ![](images/SystemDiagram.png)
 
