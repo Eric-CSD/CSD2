@@ -23,8 +23,6 @@ public:
   Envelope envelope;
   Clock clock2();
   Clock clock1();
-  // subject.Attach(&clock1);
-  // subject.Attach(&clock2);
 
 protected:
   double output;
