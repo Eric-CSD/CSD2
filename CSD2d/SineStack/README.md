@@ -21,7 +21,7 @@ oscillators allow for a lot of different and new sounds even at the same pitch.
 Low and high notes also completely differ in sound and the tremolo gives it a
 nice fade for soundscapes.
 
-## Usage
+### Usage
 
 Open the projucer file and save as audio plugin or audio app to your IDE.
 
@@ -31,9 +31,12 @@ to change amount of sines change the sine slider:
 sineSlider.setRange (Int Low, Int High);
 ```
 
-## AudioFlow
+### Audio Flow
 
 ![](images/AudioFlow.png)
 
+### System Diagram
 
-aaa
+![](images/SystemDiagram.png)
+
+### Demo
