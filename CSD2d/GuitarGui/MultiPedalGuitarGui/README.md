@@ -64,3 +64,7 @@ Ik ben begonnen met een achtergrond in te delen, die vergelijkbaar is met de moc
 ![](images/Parameter.png)
 
 Elke keer als je een slider verandert komt er boven in te staan welke slider je verandert, en wat nu de waarde is. Zo kun je op een eerste blik zien wat de waardes ongeveer zijn en de exacte waardes uit deze label halen zonder dat er veel clutter aan getallen op het scherm hoeven te staan.
+
+De drop-down menu's hebben onderverdeling in de verschillende plugins en daarna wat ze allemaal kunnen bereiken. Zo kun je makkelijk kiezen welke parameter gemoduleerd moet worden:
+
+![](images/dropDown.png)
