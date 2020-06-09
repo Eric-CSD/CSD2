@@ -1,7 +1,7 @@
 # Guitar Multi Pedal Gui
 
 ![](images/OldGui.png)
-#### Multi-effect gitaar pedaal in Pure Data, met LFO en Auto-Envelope aan te sluiten op bijna elke parameter.
+*Multi-effect gitaar pedaal in Pure Data, met LFO en Auto-Envelope aan te sluiten op bijna elke parameter.*
 
 ## Onderzoek Eigen Gui
 
@@ -36,8 +36,7 @@ Wat met de Pure Data patch mooi is dat je veel instanties van hetzelfde effect o
 ## Grafische mockup 
 
 ![](images/Mockup.png)
-
-#### Mockup gemaakt met Adobe XD.
+*Mockup gemaakt met Adobe XD.*
 
 ### Onderbouwing ontwerp-keuzes mockup
 
@@ -58,7 +57,6 @@ Als taal heb ik C++ gekozen omdat dit de meest voor de hand liggende taal is op 
 ### Process 
 
 ![](images/Geheel1.png)
-
-#### Geheel van het prototype
+*Geheel van het prototype*
 
 Ik ben begonnen met een achtergrond in te delen, die vergelijkbaar is met de mockup: Een Modulatie gedeelte en een effect gedeelte.
