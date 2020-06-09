@@ -59,4 +59,8 @@ Als taal heb ik C++ gekozen omdat dit de meest voor de hand liggende taal is op 
 ![](images/Geheel1.png)
 *Geheel van het prototype*
 
-Ik ben begonnen met een achtergrond in te delen, die vergelijkbaar is met de mockup: Een Modulatie gedeelte en een effect gedeelte.
+Ik ben begonnen met een achtergrond in te delen, die vergelijkbaar is met de mockup: Een Modulatie gedeelte en een effect gedeelte. Dit om een duidelijke indeling te creëren voor de verschillende aspecten van het geheel. Vervolgens heb ik eerst het Modulatie gedeelte opgebouwd met de benodigde sliders en drop-down menu's en deze zodanig gelabeld. Deze sliders heb ik zoals aangegeven allemaal aangewezen naar 1 label zodat je goed kunt zien wat je zojuist aan het veranderen bent.
+
+![](images/Parameter.png)
+
+Elke keer als je een slider verandert komt er boven in te staan welke slider je verandert, en wat nu de waarde is. Zo kun je op een eerste blik zien wat de waardes ongeveer zijn en de exacte waardes uit deze label halen zonder dat er veel clutter aan getallen op het scherm hoeven te staan.
