@@ -68,3 +68,9 @@ Elke keer als je een slider verandert komt er boven in te staan welke slider je 
 De drop-down menu's hebben onderverdeling in de verschillende plugins en daarna wat ze allemaal kunnen bereiken. Zo kun je makkelijk kiezen welke parameter gemoduleerd moet worden:
 
 ![](images/dropDown.png)
+
+Als laatste heb ik een lijst met alle effecten gemaakt in een ListBox en deze aan een Drag and Drop Component gehangen; Dat wil zeggen dat je uit de lijst je effect zo kunt schuiven naar de plaats in de fx-chain waar je hem wilt hebben.
+
+![](images/dragAndDrop.png)
+
+Deze functionaliteit heb ik nog niet uit kunnen breiden naar daadwerkelijke plugins door de korte deadline, maar de gehele GUI heeft al ontzettend veel bruikbaarheid en is naar mijn ogen redelijk overzichtelijk gebleven.
