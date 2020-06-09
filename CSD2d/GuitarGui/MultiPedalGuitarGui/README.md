@@ -73,4 +73,4 @@ Als laatste heb ik een lijst met alle effecten gemaakt in een ListBox en deze aa
 
 ![](images/dragAndDrop.png)
 
-Deze functionaliteit heb ik nog niet uit kunnen breiden naar daadwerkelijke plugins door de korte deadline, maar de gehele GUI heeft al ontzettend veel bruikbaarheid en is naar mijn ogen redelijk overzichtelijk gebleven.
+Deze functionaliteit heb ik nog niet uit kunnen breiden naar daadwerkelijke plugins door de korte deadline, maar de gehele GUI heeft al ontzettend veel bruikbaarheid en is in mijn ogen redelijk overzichtelijk gebleven.
