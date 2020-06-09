@@ -52,6 +52,13 @@ Op visueel aspect heb ik bij het GUI design van Joeri van zijn vorige distortion
 ## Prototype 
 
 ### Keuze library en taal
- 
+
+Als taal heb ik C++ gekozen omdat dit de meest voor de hand liggende taal is op dit gebied. Snel en flexibel en wordt uiteraard veel in combinatie met audio-plugins en effecten gebruikt. Daarnaast heb ik gekozen voor de JUCE library om mijn kennis hier meer in uit te breiden, voornamelijk op het gebied van GUI en omdat dit een veelgebruikte library is in dit veld.
+
 ### Process 
 
+![](images/Geheel1.png)
+
+#### Geheel van het prototype
+
+Ik ben begonnen met een achtergrond in te delen, die vergelijkbaar is met de mockup: Een Modulatie gedeelte en een effect gedeelte.
